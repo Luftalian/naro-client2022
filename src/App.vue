@@ -5,17 +5,34 @@ import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <main>
+    <div :class="$style.container">
+      <header :class="$style.header">
+        <router-link to="/">Home</router-link>
+        |
+        <router-link to="/axios">Axios</router-link>
+        |
+        <router-link to="/city/Tokyo">Tokyo</router-link>
+        |
+        <router-link to="/allcountry">Country</router-link>
+        |
+        <router-link to="/login">Login</router-link>
+        |
+        <router-link to="/logout">Logout</router-link>
+      </header>
+
+      <router-view />
+    </div>
+  </main>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style module>
+.container {
+  max-width: fit-content;
+  margin: auto;
+}
+.header {
+  display: flex;
+  justify-content: center;
 }
 </style>
