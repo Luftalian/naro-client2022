@@ -8,6 +8,8 @@ import CityPage from "./pages/CityPage.vue";
 import CountryPage from "./pages/CountryPage.vue";
 import CountryNamePage from "./pages/CountryNamePage.vue";
 import LogoutPage from "./pages/LogoutPage.vue";
+import WritePage from "./pages/WritePage.vue";
+import ShowPage from "./pages/ShowPage.vue";
 
 const routes = [
   { path: "/", name: "home", component: HomePage, meta: { isPublic: true } },
@@ -32,6 +34,8 @@ const routes = [
     props: true,
   },
   { path: "/logout", name: "logout", component: LogoutPage },
+  { path: "/write", name: "write", component: WritePage },
+  { path: "/show", name: "show", component: ShowPage },
   { path: "/:path(.*)", component: NotFound, meta: { isPublic: true } },
 ];
 

@@ -1,12 +1,12 @@
 <script setup>
 import axios from "axios";
 import { ref, onMounted } from "vue";
-const props = defineProps({
-  cityName: {
-    type: String,
-    required: true,
-  },
-});
+// const props = defineProps({
+//   cityName: {
+//     type: String,
+//     required: true,
+//   },
+// });
 const countriesInfo = ref();
 onMounted(async () => {
   const res = await axios.get("/api/countries");

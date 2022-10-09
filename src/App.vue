@@ -16,6 +16,10 @@ import HelloWorld from "./components/HelloWorld.vue";
         |
         <router-link to="/allcountry">Country</router-link>
         |
+        <router-link to="/write">Write</router-link>
+        |
+        <router-link to="/show">Show</router-link>
+        |
         <router-link to="/login">Login</router-link>
         |
         <router-link to="/logout">Logout</router-link>
